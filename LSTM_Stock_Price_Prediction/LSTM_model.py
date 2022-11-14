@@ -51,8 +51,8 @@ def setup_model(x_train, y_train):
     model.add(layers.Dense(1))
     model.compile(optimizer='adam', loss='mean_squared_error')
     model.fit(x_train, y_train, batch_size=1, epochs=3)
-
     return model
+
 
 def predicts(model, date=str(datetime.now()).split(" ")[0]):
     return model.predict(date)
