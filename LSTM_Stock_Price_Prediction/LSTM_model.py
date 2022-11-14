@@ -1,6 +1,5 @@
 import math
 from datetime import datetime
-
 import yfinance as yf
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
@@ -8,7 +7,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 
 def get_data(stck_ticker='AAPL'):
-    stock_data = yf.download(stck_ticker, start='2016-01-01', end='2021-10-01')
+    stock_data = yf.download(stck_ticker, period="10y")
     return stock_data
 
 def clean_data(stock_data):
