@@ -1,15 +1,9 @@
 import pandas as pd
-from datetime import datetime, date, timedelta
 import numpy as np
 import yfinance as yf
-from sklearn.model_selection import train_test_split
 from ta import add_all_ta_features
 import warnings
 from scipy.signal import argrelextrema
-from dateutil.relativedelta import relativedelta
-from sklearn.tree import DecisionTreeClassifier
-from tqdm import tqdm
-from sklearn import metrics
 
 
 def getData(ticker: str, period = "10y") -> pd.DataFrame:

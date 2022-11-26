@@ -1,10 +1,23 @@
 import LSTM_model
 
 def main_run():
-    data = LSTM_model.get_data(input("Provide Stock Ticker: "))
-    x_train, y_train, x_test, y_test = LSTM_model.clean_data(data)
-    model = LSTM_model.setup_model(x_train, y_train)
-    return LSTM_model.predicts(model)
+    stock_data = LSTM_model.get_data(input("Stock Ticker: "))
+    x_train, x_test, y_train, y_test, training_data_len, scaler, scaled_data = LSTM_model.clean_split_data(stock_data)
+    predictions, model = LSTM_model.train_model_predict(x_train, y_train, x_test, scaler)
+    LSTM_model.show_predictions(stock_data, training_data_len, predictions)
+    if LSTM_model.predict_next_day(model, scaled_data, scaler) > predictions[len(predictions) - 1]:
+        return 1
+    else:
+        return 0
 
 if __name__ == "__main__":
     print(main_run())
+
+
+
+
+
+
+
+
+
