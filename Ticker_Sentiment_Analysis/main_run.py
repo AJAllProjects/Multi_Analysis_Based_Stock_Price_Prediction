@@ -1,5 +1,5 @@
-import sentiment_data_collection
-import sentiment_analysis
+import Ticker_Sentiment_Analysis.sentiment_data_collection as sentiment_data_collection
+import Ticker_Sentiment_Analysis.sentiment_analysis as sentiment_analysis
 
 
 def main_run():

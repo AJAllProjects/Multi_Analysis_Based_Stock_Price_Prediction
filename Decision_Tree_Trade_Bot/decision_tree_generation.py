@@ -416,7 +416,7 @@ def getDecision(dfrow):
                 else:  # if dfrow['momentum_stoch_rsi_k'] > 0.85
                     return 0
 
-def make_buy_decision(ticker):
+def make_buy_decision(ticker = "TSLA"):
     df = getData(ticker)
     decision = getDecision(df.iloc[-1])
     return decision == 1

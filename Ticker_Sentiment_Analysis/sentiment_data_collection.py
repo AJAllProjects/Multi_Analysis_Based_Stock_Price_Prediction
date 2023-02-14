@@ -1,4 +1,4 @@
-import constants
+import Ticker_Sentiment_Analysis.constants as constants
 from datetime import datetime, timedelta
 import requests
 import pandas as pd
