@@ -1,5 +1,5 @@
 import Decision_Tree_Trade_Bot.decision_tree_generation as bot
-import LSTM_Stock_Price_Prediction.main_lstm_run as lstm
+import LSTM_Stock_Price_Prediction.LSTM_model as lstm
 import Ticker_Sentiment_Analysis.main_run as sentiment_analysis
 import Volatility_Check.volatility_prediction as volatility_predict
 from multiprocessing import Process
